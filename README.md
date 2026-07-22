@@ -37,6 +37,7 @@ Open **CFG** inside the app. Most data sources work without any setup. Optional 
 
 Everything else (SEC EDGAR, US Treasury yields, World Bank macro, USGS earthquakes, NOAA storms, commodity prices) is free and requires no configuration.
 
-## Features
+## Documentation
 
-See the [Changelog](https://github.com/dillonsnyman1/lattice-releases/blob/main/CHANGELOG.md) for a full list of what's included in each release.
+- [User Guide](https://github.com/dillonsnyman1/lattice-releases/blob/main/USER_GUIDE.md) — features, keyboard shortcuts, and configuration details
+- [Changelog](https://github.com/dillonsnyman1/lattice-releases/blob/main/CHANGELOG.md) — what changed in each release
