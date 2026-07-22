@@ -35,4 +35,4 @@ Everything else (SEC EDGAR, US Treasury yields, World Bank macro, USGS earthquak
 
 ## Features
 
-Full feature list and keyboard shortcuts are in the [User Guide](https://github.com/dillonsnyman1/lattice/blob/main/docs/USER_GUIDE.md).
+See the [Changelog](https://github.com/dillonsnyman1/lattice-releases/blob/main/CHANGELOG.md) for a full list of what's included in each release.
