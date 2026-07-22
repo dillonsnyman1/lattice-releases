@@ -51,6 +51,10 @@ The only outbound connections are ones you initiate:
 
 API keys are stored locally in the app's config directory on your device and are never transmitted anywhere by Lattice.
 
+## Bugs and Feedback
+
+Open an issue on the [Issues](https://github.com/dillonsnyman1/lattice-releases/issues) page. Include your platform (macOS/Windows/Linux), the version number shown in the top bar, and steps to reproduce the problem.
+
 ## Documentation
 
 - [User Guide](https://github.com/dillonsnyman1/lattice-releases/blob/main/USER_GUIDE.md) — features, keyboard shortcuts, and configuration details
