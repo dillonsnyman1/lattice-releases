@@ -41,13 +41,15 @@ Everything else (SEC EDGAR, US Treasury yields, World Bank macro, USGS earthquak
 
 Lattice runs entirely on your machine. No usage data, watchlists, portfolio positions, or API keys are sent to or stored on any external server controlled by this project.
 
-The only outbound connections are ones you initiate directly:
+All app data (watchlists, saved screens, order history, settings) is kept in a local SQLite database on your own device.
 
-- **Market data providers** (Yahoo Finance, Polygon.io, SEC EDGAR, etc.) — read-only requests for data
-- **OANDA** — only if you connect a trading account; all communication goes directly between the app and OANDA's own servers
-- **Your LLM provider** (OpenAI, Anthropic, Ollama, etc.) — only if you configure the AI assistant; requests go directly to whichever API you set up using your own key
+The only outbound connections are ones you initiate:
 
-Your API keys are stored locally in the app's config directory on your own device.
+- **Market data providers** (Yahoo Finance, Polygon.io, SEC EDGAR, etc.): read-only requests for prices and reference data
+- **OANDA**: only if you connect a trading account; all communication goes directly between the app and OANDA's own servers
+- **Your LLM provider** (OpenAI, Anthropic, Ollama, etc.): only if you configure the AI assistant; requests go directly to whichever API you set up using your own key
+
+API keys are stored locally in the app's config directory on your device and are never transmitted anywhere by Lattice.
 
 ## Documentation
 
