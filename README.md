@@ -37,6 +37,18 @@ Open **CFG** inside the app. Most data sources work without any setup. Optional 
 
 Everything else (SEC EDGAR, US Treasury yields, World Bank macro, USGS earthquakes, NOAA storms, commodity prices) is free and requires no configuration.
 
+## Privacy
+
+Lattice runs entirely on your machine. No usage data, watchlists, portfolio positions, or API keys are sent to or stored on any external server controlled by this project.
+
+The only outbound connections are ones you initiate directly:
+
+- **Market data providers** (Yahoo Finance, Polygon.io, SEC EDGAR, etc.) — read-only requests for data
+- **OANDA** — only if you connect a trading account; all communication goes directly between the app and OANDA's own servers
+- **Your LLM provider** (OpenAI, Anthropic, Ollama, etc.) — only if you configure the AI assistant; requests go directly to whichever API you set up using your own key
+
+Your API keys are stored locally in the app's config directory on your own device.
+
 ## Documentation
 
 - [User Guide](https://github.com/dillonsnyman1/lattice-releases/blob/main/USER_GUIDE.md) — features, keyboard shortcuts, and configuration details
