@@ -6,14 +6,16 @@ A Bloomberg Terminal alternative built for quantitative analysts. Keyboard-first
 
 Get the latest release from the [Releases](https://github.com/dillonsnyman1/lattice-releases/releases/latest) page.
 
-| Mac | File |
+| Platform | File |
 |---|---|
-| Apple Silicon (M1/M2/M3/M4) | `Lattice_x.x.x_aarch64.dmg` |
-| Intel | `Lattice_x.x.x_x64.dmg` |
+| macOS Apple Silicon (M1/M2/M3/M4) | `Lattice_x.x.x_aarch64.dmg` |
+| macOS Intel | `Lattice_x.x.x_x64.dmg` |
+| Windows | `Lattice_x.x.x_x64-setup.exe` |
+| Linux | `Lattice_x.x.x_amd64.AppImage` |
 
-Open the `.dmg`, drag Lattice to Applications, and launch it.
+**macOS first launch:** the app is not notarized through the App Store, so macOS may block it. Right-click the app icon, select Open, and confirm.
 
-**First launch:** macOS may block the app since it is not notarized through the App Store. Right-click the app icon, select Open, and confirm.
+**Linux:** make the AppImage executable (`chmod +x Lattice_*.AppImage`) before running it.
 
 ## Updates
 
