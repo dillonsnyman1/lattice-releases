@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" width="96" alt="Lattice" />
+</p>
+
 # Lattice Terminal
 
 A Bloomberg Terminal alternative built for quantitative analysts. Keyboard-first, data-dense, wired to live market data.
