@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.1.0 — 2026-07-23
+
+### News
+- Finnhub added as an optional secondary news source. Configure a free API key in CFG. When active, results from both sources are merged and deduplicated automatically.
+- AI SUMMARY button in the news panel synthesises the latest headlines into a 3-4 sentence narrative. Requires an AI provider configured in CFG.
+
+### Fundamentals
+- New THESIS tab in the fundamentals panel. Generates a bull case, bear case, sentiment verdict, summary, and key risks from the loaded fundamental data. Powered by your configured AI provider.
+
 ## v1.0.0 — 2026-07-22
 
 First public release.
