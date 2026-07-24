@@ -160,6 +160,20 @@ If a Polygon.io API key is configured, quotes and charts use Polygon for real-ti
 
 ---
 
+## News
+
+Type `NI` or `N` to open the news panel for the active symbol.
+
+Headlines are pulled from Polygon.io (if a key is configured) or Yahoo Finance, and merged with Finnhub (if a Finnhub key is configured in CFG). Duplicate stories from different sources are automatically removed. Results are sorted newest-first.
+
+**AI SUMMARY**
+
+Click the AI SUMMARY button in the panel header to generate a 3-4 sentence narrative covering the key themes and sentiment across the most recent headlines. The summary is grounded in the headlines shown and regenerates fresh for each symbol.
+
+Requires an AI provider configured in CFG. The summary clears when you switch to a different symbol.
+
+---
+
 ## Company Profile
 
 Type `DES` with a symbol loaded to open the company profile. It has three sub-tabs.
@@ -200,6 +214,20 @@ Cash flow for the last four fiscal years: operating cash flow, capex, free cash 
 **RATIOS**
 
 Valuation and profitability ratios: P/E, forward P/E, P/B, P/S, EV/EBITDA, beta, dividend yield, gross margin, net margin, ROE, ROA, debt/equity, current ratio.
+
+**THESIS**
+
+Click GENERATE THESIS to produce an AI-generated bull and bear case from the loaded fundamental data. The output includes:
+
+- A sentiment verdict (BULLISH, BEARISH, or NEUTRAL)
+- A 2-3 sentence balanced summary of the investment case
+- Bull case: 3-5 specific reasons to be long, grounded in the numbers
+- Bear case: 3-5 specific reasons to be cautious, grounded in the numbers
+- Key risks to monitor
+
+Every point is derived from the data shown in the RATIOS tab. The AI does not add information beyond what is provided. Click REGENERATE after earnings to refresh the thesis with new data.
+
+Requires an AI provider configured in CFG. The thesis clears automatically when you switch to a different symbol.
 
 ---
 
@@ -845,6 +873,12 @@ Type `CFG` to open settings.
 Required for real-time and delayed quotes, charts, news, and instrument search. Without a key, the app falls back to Yahoo Finance.
 
 Sign up at [polygon.io](https://polygon.io) for a free key (delayed data). Paste it in and click SAVE.
+
+**Finnhub API key**
+
+Optional. When configured, Finnhub news is fetched alongside the primary news source and merged into the NI panel. Duplicate stories are removed automatically. The free tier provides 60 calls per minute and does not require a credit card.
+
+Sign up at [finnhub.io](https://finnhub.io) for a free key. Paste it in CFG under FINNHUB API KEY and click SAVE.
 
 **AI Assistant**
 
