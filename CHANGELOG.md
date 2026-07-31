@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.2.0 — 2026-07-31
+
+### Quant Notebook
+- New `NB` / `NOTEBOOK` / `NBOOK` panel: interactive Python notebook and C++ script runner wired to Lattice data
+- Python kernel runs as a persistent subprocess managed in Rust — variables accumulate across cells, no Jupyter dependency required
+- Matplotlib figures are captured automatically and rendered as inline PNG images below each cell
+- pandas DataFrames are rendered as styled HTML tables
+- Pre-injected globals in every session: `lattice` (pointed at the local API), `pd`, `np`, `plt`
+- `Shift+Enter` runs a cell and advances to the next; `Ctrl/Cmd+Enter` runs in place
+- Toolbar: Run All, interrupt (■ STOP), add cell, clear outputs, save, restart kernel
+- Kernel status badge: off / starting / idle / busy / dead
+- Notebooks persist to SQLite with 1.5-second auto-save; sidebar for create and delete
+- C++ tab: single-file script runner compiled with `clang++` or `g++`; `lattice.hpp` is available automatically with no include path setup required
+
+### Local REST API
+- Three new endpoints: `GET /v1/screener?symbols=AAPL,MSFT,...` (bulk fundamental data for up to 60 symbols in parallel), `GET /v1/macro` (US Treasury yield curve 3M → 30Y), `GET /v1/oanda/account` (NAV, margin, P&L for the active OANDA account), `GET /v1/oanda/positions` (open positions with units, average price, and unrealised P&L)
+- OANDA endpoints proxy through the token and account already configured in CFG — no additional setup needed
+
+### Python SDK (`sdk/lattice.py`)
+- `history(symbol, range, interval)` — returns a pandas DataFrame with a UTC DatetimeIndex and numeric-typed OHLCV columns; zero boilerplate in notebooks
+- `screen(sector, min_market_cap, max_pe, min_net_margin, ...)` — criteria-based screener across a built-in ~120-symbol US large/mid-cap universe; market cap in $B, margins and growth as fractions
+- `oanda_account()` — OANDA account summary (NAV, balance, unrealised P&L, margin)
+- `oanda_positions()` — OANDA open positions (instrument, units, average price, unrealised P&L)
+
+---
+
 ## v1.1.0 — 2026-07-23
 
 ### News
@@ -8,6 +34,8 @@
 
 ### Fundamentals
 - New THESIS tab in the fundamentals panel. Generates a bull case, bear case, sentiment verdict, summary, and key risks from the loaded fundamental data. Powered by your configured AI provider.
+
+---
 
 ## v1.0.0 — 2026-07-22
 
